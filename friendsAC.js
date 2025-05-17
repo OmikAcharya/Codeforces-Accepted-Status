@@ -1,10 +1,8 @@
 document.addEventListener("keydown", (event) => {
-  if (
-    event.code === "KeyG" &&
-    event.ctrlKey &&
-    !event.metaKey &&
-    !event.altKey
-  ) {
+  console.log("Started");
+  console.log(event.code);
+  if (event.code === "KeyG") {
+    console.log("Triggered");
     const url = window.location.href;
     const match = url.match(
       /codeforces\.com\/(?:contest|problemset\/problem|gym)\/(\d+)\/([A-Z]\d*)/i,

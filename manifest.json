@@ -1,21 +1,28 @@
 {
-  "manifest_version": 2,
-  "name": "Codeforces_FriendsAccepted",
+  "manifest_version": 3,
+  "name": "Codeforces FriendsAccepted",
   "version": "1.0",
-
-  "description": "Get friends solutions easily :), just press g",
-  "permissions": ["tabs", "storage", "<all_urls>"],
+  "description": "Press 'G' on a Codeforces problem page to open your friends' accepted solutions.",
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "logo48.png"
   },
-
+  "host_permissions": ["https://codeforces.com/*"],
   "content_scripts": [
     {
       "matches": [
         "https://codeforces.com/problemset/problem/*/*",
         "https://codeforces.com/contest/*/problem/*"
       ],
-      "js": ["friendsAC.js"]
+      "js": ["friendsAC.js"],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+  "action": {
+    "default_title": "Codeforces FriendsAccepted"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "codeforcesfriendsaccepted@yourdomain.com"
+    }
+  }
 }
