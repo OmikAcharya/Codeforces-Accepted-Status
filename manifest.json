@@ -11,7 +11,8 @@
     {
       "matches": [
         "https://codeforces.com/problemset/problem/*/*",
-        "https://codeforces.com/contest/*/problem/*"
+        "https://codeforces.com/contest/*/problem/*",
+        "https://codeforces.com/gym/*"
       ],
       "js": ["friendsAC.js"],
       "run_at": "document_idle"
